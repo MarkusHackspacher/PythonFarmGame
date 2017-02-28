@@ -1,19 +1,33 @@
 Python farm game
 ================
 
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/0ca8d4cc207947f5a59027a6621212f1/badge.svg)]
-(https://www.quantifiedcode.com/app/project/0ca8d4cc207947f5a59027a6621212f1)
-
 Farming game where you can plant strawberries, onions, beans, carrots, potatos, tomatos and radishes.
 Use axe and pickaxe to remove plank and stone and shovel to remove anthill.
 
 Writen in python using pygame game library and supports Python 2.7 and 3.x.
 
 Creator: orneo1212 <orneo1212@gmail.com>
-GitHub (source): https://github.com/orneo1212/PythonFarmGame
+GitHub (source): [github.com/orneo1212/PythonFarmGame](https://github.com/orneo1212/PythonFarmGame)
 
 recent development:
-GitHub (source): https://github.com/MarkusHackspacher/PythonFarmGame
+GitHub (source): [github.com/MarkusHackspacher/PythonFarmGame](https://github.com/MarkusHackspacher/PythonFarmGame)
+
+Install
+-------
+
+Then you copied the source code of the program on your computer,
+either download the zip file of the project or download with the version control system::
+
+```
+# git clone https://github.com/MarkusHackspacher/PythonFarmGame.git
+```
+
+change the directory and run::
+
+```
+cd PythonFarmGame
+./pyFarmGame.py
+```
 
 Keys
 ----
@@ -39,4 +53,4 @@ Tools
 Licence
 -------
 
-GPL v3 ( http://gplv3.fsf.org or LICENSE included with game)
+GPL v3 ( [gplv3.fsf.org](http://gplv3.fsf.org) or LICENSE included with game)
