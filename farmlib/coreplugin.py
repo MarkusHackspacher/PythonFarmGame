@@ -27,7 +27,6 @@ class CorePlugin(BasePlugin):
         self.system.register_event("toolused", self.listener)
 
 
-
 class CoreListener(Listener):
     """CoreListener class
     """

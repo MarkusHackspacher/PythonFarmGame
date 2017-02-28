@@ -8,7 +8,6 @@ import pygame
 from farmlib.farm import Seed
 
 
-
 def draw_tools(surface, currenttool, currentseed, imgloader,
                drawnearcursor=True):
     """Draw selection on selected tool
@@ -151,8 +150,8 @@ def render_seed_notify(surface, font, posx, posy, farmobject, farmtile,
         # grow progress
         if not farmobject.to_harvest:
             width = sizex - 4
-            p = int(width / float(farmobject.growtime)
-                    * int(farmobject.growtimeremaining))
+            p = int(width / float(farmobject.growtime) *
+                    int(farmobject.growtimeremaining))
             py = sizey - 12
 
             if farmtile["water"]:

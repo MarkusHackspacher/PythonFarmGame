@@ -86,7 +86,7 @@ class Listener(object):
         else:
             return False
 
-    def _handleEvent(self, event):
+    def _handle_event(self, event):
         """call handler (handler_<eventname>)
 
         :param event:
@@ -208,7 +208,7 @@ class PluginSystem(object):
             ev = self.eventqueue.pop(0)
             for listener in self._listeners:
                 listener.apply_priority(ev)
-                listener.handle_event(ev)
+                listener._handle_event(ev)
 
     def emit(self, event):
         """Emit event"""
