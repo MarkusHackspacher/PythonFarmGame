@@ -17,8 +17,7 @@ except NameError:
 
 
 class GameManager(object):
-    """Game Manager
-
+    """Game Manager class
     """
     def __init__(self):
         self.farms = []

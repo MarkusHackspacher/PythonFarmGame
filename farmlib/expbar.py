@@ -9,8 +9,7 @@ from pygameui import Label
 
 
 class ExpBar(Label):
-    """ExpBar
-
+    """ExpBar class
     """
     def __init__(self, player):
         self.player = player

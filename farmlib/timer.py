@@ -2,8 +2,7 @@ import time
 
 
 class Timer(object):
-    """
-    Timer
+    """Timer class
     """
     def __init__(self):
         self.lasttick = 0.0
@@ -11,8 +10,7 @@ class Timer(object):
         self.lastticktime = 0.0
 
     def tick(self, destfps=0):
-        """
-        Tick a timer. If the destfps was given then application will not run
+        """Tick a timer. If the destfps was given then application will not run
         faster then destfps frames per second
         """
         self.lastticktime = time.time() - self.lasttick

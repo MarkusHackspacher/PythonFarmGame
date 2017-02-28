@@ -4,8 +4,7 @@ from farmlib.farm import objects, FarmObject, Seed
 
 
 class Player(object):
-    """
-    class Player
+    """Player class
     """
     def __init__(self):
         self.inventory = [3]

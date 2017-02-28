@@ -19,7 +19,7 @@ class ImageLoader(object):
             self.loadimage(item)
         return self.loaded
 
-    def loadimage(self, name):
+    def loadimage(self, name, scale=True):
         """Load image by name"""
         # wrong name
         if name not in self.config:
@@ -27,6 +27,17 @@ class ImageLoader(object):
         # check loaded images
         if name in self.loaded:
             return self.loaded[name]
+
+        # wrong name
+        try:
+            self.config[name]
+        except KeyError:
+            return self.empty.copy()
+        # check loaded images
+        try:
+            return self.loaded[name]
+        except KeyError:
+            pass
 
         # load file
         filename = self.config[name]

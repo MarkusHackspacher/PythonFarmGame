@@ -10,8 +10,7 @@ from farmlib.tooltip import Tooltip
 
 
 class InventoryWindow(Container):
-    """Inventory Window
-
+    """Inventory Window class
     """
     def __init__(self, imgloader, player):
         Container.__init__(self, 400, 500, (200, 50))
@@ -88,7 +87,8 @@ class InventoryWindow(Container):
                                self.on_item_select, itemid=item)
             itembutton.connect("onenter",
                                self.on_item_enter, itemid=item)
-            itembutton.connect("onleave", self.on_item_leave)
+            itembutton.connect("onleave",
+                               self.on_item_leave)
             self.addwidget(itembutton)
 
             # item count
@@ -126,10 +126,10 @@ class InventoryWindow(Container):
         # this is object
         else:
             data = [
-                    ["Name", seed["name"]],
-                    ["Description", seed["description"]],
-                    ["Required level", str(seed.get("requiredlevel", 1))],
-                    ]
+                ["Name", seed["name"]],
+                ["Description", seed["description"]],
+                ["Required level", str(seed.get("requiredlevel", 1))],
+                ]
         mx, my = pygame.mouse.get_pos()
         self.tooltip = [Tooltip((mx + 5, my + 5), data), widget]
 

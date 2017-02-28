@@ -38,6 +38,7 @@ class Event(object):
     Base event
     Event name will be lowercase
     """
+
     def __init__(self, name, **args):
         self.name = name.lower()
         self.args = args
@@ -46,7 +47,7 @@ class Event(object):
     def __str__(self):
         return "Event:{0!s} Priority:{1:d} Args:{2!s}".format(
             str(self.name), self.priority, str(self.args)
-            )
+        )
 
 
 # LISTENER
@@ -54,10 +55,10 @@ class Listener(object):
     """
     Base listener
     """
+
     def __init__(self, plugin):
         self.plugin = plugin
-        self.eventdef = {}
-        # dict for supported events for listener
+        self.eventdef = {}  # dict for supported events for listener
 
     def is_event_supported(self, eventname):
         """
@@ -85,17 +86,17 @@ class Listener(object):
         else:
             return False
 
-    def handle_event(self, event):
+    def _handleEvent(self, event):
         """call handler (handler_<eventname>)
 
         :param event:
         :return:
         """
-        handler = getattr(self, "handler_{0!s}".format(event.name), None)
+        handler = getattr(self, "handler_%s" % event.name, None)
         if handler:
             handler(**event.args)
         else:
-            print("Handler for event {0!s} not found".format(event.name))
+            print("Handler for event %s not found" % event.name)
 
 
 # PLUGIN
@@ -108,8 +109,7 @@ class BasePlugin(object):
 
     def __init__(self):
         """Init base plugin"""
-        self.system = None
-        # Plugin system object when installed
+        self.system = None  # Plugin system object when installed
 
     def register_global_hook(self, hookname, function):
         """Register Function globally."""
@@ -129,6 +129,7 @@ class PluginSystem(object):
     """
     Plugin system. Only one instance for application.
     """
+
     def __init__(self):
         self.eventqueue = []  # Event queue
         self._plugins = []  # Plugins list

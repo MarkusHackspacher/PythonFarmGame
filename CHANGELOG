@@ -3,6 +3,7 @@ Version 0.6
 
 Version 0.5.2
 + Added ponds. Ponds water nearest plants
++ Added progress bar for plants popup
 
 Version 0.5.1
 + M key to mute/unmute sounds

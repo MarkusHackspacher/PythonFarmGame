@@ -5,3 +5,5 @@ game.lock
 
 Screenshots/*.png
 
+.vscode
+dev/

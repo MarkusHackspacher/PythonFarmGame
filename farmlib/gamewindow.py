@@ -52,9 +52,9 @@ for gobject in objects:
 
 
 class GameWindow(Window):
-    """Game Window
-
+    """Game Window class
     """
+
     def __init__(self):
         Window.__init__(self, 800, 600, (0, 0))
 

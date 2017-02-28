@@ -23,8 +23,7 @@ OBJECTSNOTINMARKET = farmlib.rules["OBJECTSNOTINMARKET"]
 
 
 class MarketWindow(Container):
-    """Market Window
-
+    """Market Window class
     """
     def __init__(self, width, height, imgloader, player, gamemanager):
         self.gamemanager = gamemanager
@@ -142,9 +141,9 @@ class MarketWindow(Container):
         self.addwidget(self.selectedicon)
 
         # add buttons
-        self.buybutton = Button("BUY", (60, 370), color=(0, 255, 0),
+        self.buybutton = Button("BUY", (60, 375), color=(0, 255, 0),
                                 labelsize=13)
-        self.sellbutton = Button("SELL", (260, 375), color=(0, 255, 0),
+        self.sellbutton = Button("SELL", (300, 375), color=(0, 255, 0),
                                  labelsize=13)
         self.addwidget(self.buybutton)
         self.addwidget(self.sellbutton)
@@ -325,10 +324,10 @@ class MarketWindow(Container):
         # Item is object
         else:
             data = [
-                    ["Name", seed["name"]],
-                    ["Description", seed["description"]],
-                    ["Required level", str(seed.get("requiredlevel", 1))],
-                    ]
+                ["Name", seed["name"]],
+                ["Description", seed["description"]],
+                ["Required level", str(seed.get("requiredlevel", 1))],
+            ]
         mx, my = pygame.mouse.get_pos()
         self.tooltip = [Tooltip((mx + 5, my + 5), data), widget]
 

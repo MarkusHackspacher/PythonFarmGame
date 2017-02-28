@@ -444,6 +444,7 @@ class FarmObject(object):
 
 class Seed(FarmObject):
     """Represent seed farmobject"""
+
     def __init__(self):
         """Init new seed"""
         FarmObject.__init__(self)

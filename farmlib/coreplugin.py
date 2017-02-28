@@ -27,9 +27,9 @@ class CorePlugin(BasePlugin):
         self.system.register_event("toolused", self.listener)
 
 
+
 class CoreListener(Listener):
-    """
-    CoreListener
+    """CoreListener class
     """
     def __init__(self, plugin):
         Listener.__init__(self, plugin)
@@ -77,7 +77,7 @@ class CoreListener(Listener):
         :return:
         """
         if not player.watercanuses:
-            False
+            return False
         done = farm.water(position[0], position[1])
         if not done:
             return False
