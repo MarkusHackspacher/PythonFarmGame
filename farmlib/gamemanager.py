@@ -155,12 +155,12 @@ class GameManager(object):
                 self.update()
 
     def save_gamestate(self, player):
-        """Saveing game state
+        """Saving game state
 
         :param player:
         :return:
         """
-        print("Saveing game state...")
+        print("Saving game state...")
         data = DictMapper()
         # Save player data
         data["inventory"] = player.inventory
