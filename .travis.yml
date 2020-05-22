@@ -16,9 +16,13 @@ before_install:
         libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
     fi
 
+virtualenv:
+    system_site_packages: true
+
 install: 
     - pip install -r requirements.txt
     - pip install coveralls
+    - pip install isort
 
 script: 
    - isort -c -rc
