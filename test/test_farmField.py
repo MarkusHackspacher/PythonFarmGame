@@ -19,14 +19,16 @@
 # You should have received a copy of the GNU General Public License
 # along with Python farm game.  If not, see <http://www.gnu.org/licenses/>.
 
-from unittest import TestCase
 import os
+from unittest import TestCase
+
 import pygame
+
 import farmlib
-from farmlib.imageloader import ImageLoader
-from farmlib.gamemanager import GameManager
-from farmlib.inventorywindow import InventoryWindow
 from farmlib.farm import FarmField, FarmObject
+from farmlib.gamemanager import GameManager
+from farmlib.imageloader import ImageLoader
+from farmlib.inventorywindow import InventoryWindow
 
 pygame.init()
 

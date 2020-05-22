@@ -5,8 +5,8 @@ import base64
 import pygame
 
 from farmlib.farm import objects
-from pygameui import Label, Button, Container, Image
 from farmlib.tooltip import Tooltip
+from pygameui import Button, Container, Image, Label
 
 
 class InventoryWindow(Container):

@@ -6,6 +6,7 @@ Created on 22-05-2012
 from __future__ import absolute_import
 
 import pygame
+
 from pygameui.widget import Widget
 
 

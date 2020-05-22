@@ -8,10 +8,9 @@ from __future__ import absolute_import
 import pygame
 
 import farmlib
-
-from pygameui import Label, Image, Container, Button
 from farmlib.farm import objects
 from farmlib.tooltip import Tooltip
+from pygameui import Button, Container, Image, Label
 
 try:
     xrange

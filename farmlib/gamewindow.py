@@ -5,33 +5,28 @@ Created on 27-05-2012
 '''
 from __future__ import division
 
+import logging
 import os
 import random
 from datetime import datetime
-import logging
-
 
 import pygame
+
 import farmlib
-
-from farmlib import __VERSION__
-from farmlib.farm import objects
-from farmlib.imageloader import ImageLoader
-from farmlib.timer import Timer
-from farmlib.expbar import ExpBar
-from farmlib.renderfunctions import render_field, render_rain
-from farmlib.renderfunctions import render_seed_notify
-from farmlib.renderfunctions import draw_selected_seed
-from farmlib.renderfunctions import draw_tools
-
-from farmlib.marketwindow import MarketWindow
-from farmlib.inventorywindow import InventoryWindow
-from farmlib.helpwindow import HelpWindow
-from farmlib import PluginSystem
+from farmlib import __VERSION__, PluginSystem
 from farmlib.coreplugin import CorePlugin
-
-from pygameui import Label, Button, Window, Image
+from farmlib.expbar import ExpBar
+from farmlib.farm import objects
 from farmlib.gamemanager import GameManager
+from farmlib.helpwindow import HelpWindow
+from farmlib.imageloader import ImageLoader
+from farmlib.inventorywindow import InventoryWindow
+from farmlib.marketwindow import MarketWindow
+from farmlib.renderfunctions import (draw_selected_seed, draw_tools,
+                                     render_field, render_rain,
+                                     render_seed_notify)
+from farmlib.timer import Timer
+from pygameui import Button, Image, Label, Window
 
 log = logging.getLogger("farmlib/gamewindow")
 

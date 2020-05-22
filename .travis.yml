@@ -31,5 +31,6 @@ script:
    - coverage run -m unittest
 
 after_success:
+- coverage report -m
 - coveralls
 

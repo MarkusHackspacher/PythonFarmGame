@@ -20,7 +20,6 @@ Version: 0.2.1
 
 import logging
 
-
 # Constans
 PRIORITY_LOW = -10
 PRIORITY_NORMAL = 0

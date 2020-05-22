@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import os
+
 import pygame
 
-from farmlib import __VERSION__
-from farmlib import PluginSystem
+from farmlib import __VERSION__, PluginSystem
 from farmlib.menuwindow import MenuWindow
 
 pygame.init()

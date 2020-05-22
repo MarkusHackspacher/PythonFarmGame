@@ -7,8 +7,8 @@ import os
 
 import pygame
 
-from pygameui import Label, Button, Container, Image
 from farmlib.gamewindow import GameWindow
+from pygameui import Button, Container, Image, Label
 
 
 class MenuWindow(Container):

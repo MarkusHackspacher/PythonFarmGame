@@ -1,13 +1,13 @@
 from __future__ import absolute_import
 
+import base64
 import os
 import random
 import time
-import base64
 
 import farmlib
-from farmlib.pnoise import pnoise
 from farmlib.dictmapper import DictMapper
+from farmlib.pnoise import pnoise
 
 try:
     xrange

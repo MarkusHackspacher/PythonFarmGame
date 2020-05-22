@@ -6,8 +6,8 @@ Created on 17-07-2012
 import os
 import time
 
-from farmlib.farm import FarmField, FarmTile, FarmObject, Seed, objects
 from farmlib import DictMapper
+from farmlib.farm import FarmField, FarmObject, FarmTile, Seed, objects
 from farmlib.player import Player
 
 try:
