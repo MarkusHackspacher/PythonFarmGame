@@ -16,8 +16,10 @@ before_install:
         libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
     fi
 
-virtualenv:
-    system_site_packages: true
+env:
+  global:
+    - SDL_VIDEODRIVER=dummy
+    - SDL_AUDIODRIVER=disk
 
 install: 
     - pip install -r requirements.txt
