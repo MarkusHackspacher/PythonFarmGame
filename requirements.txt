@@ -1,3 +1,4 @@
+pygame
 # unit test requirements
 pep8
 

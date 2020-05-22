@@ -22,11 +22,20 @@ either download the zip file of the project or download with the version control
 # git clone https://github.com/MarkusHackspacher/PythonFarmGame.git
 ```
 
-change the directory and run::
+install pygame, change the directory and run::
 
 ```
+pip install pygame
 cd PythonFarmGame
 ./pyFarmGame.py
+```
+
+start with Python3
+
+```
+pip3 install pygame
+cd PythonFarmGame
+python3 ./pyFarmGame.py
 ```
 
 Keys
