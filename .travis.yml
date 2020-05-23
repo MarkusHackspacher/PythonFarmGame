@@ -6,17 +6,13 @@ python:
  - "3.8"
 
 before_install:
-  - |
-    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      sudo apt-get update
-      sudo apt-get install python-dev libsdl-image1.2-dev libsdl-mixer1.2-dev \
-        libsdl-ttf2.0-dev libsdl1.2-dev python-numpy libportmidi-dev libjpeg-dev \
-        libtiff5-dev libx11-6 libx11-dev xfonts-base xfonts-100dpi xfonts-75dpi \
-        xfonts-cyrillic fluid-soundfont-gm musescore-soundfont-gm \
+  -   sudo apt-get update
+  -   sudo apt-get install python-dev libsdl-image1.2-dev libsdl-mixer1.2-dev \
+        libsdl-ttf2.0-dev libsdl1.2-dev libportmidi-dev libjpeg-dev \
+        libtiff5-dev libx11-6 libx11-dev  \
+        fluid-soundfont-gm musescore-soundfont-gm \
         libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
-    fi
-  - sudo apt-get install -y xvfb herbstluftwm
-
+# python-numpy xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic
 env:
   global:
     - SDL_VIDEODRIVER=dummy
@@ -27,16 +23,10 @@ install:
     - pip install coveralls
     - pip install isort
     - pip install pycodestyle
-    - "export DISPLAY=:99.0"
-    - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1920x1200x24 -ac +extension GLX +render -noreset"
-    - sleep 3
-before_script:
-    - "herbstluftwm &"
-    - sleep 1
 
 script: 
    - isort -c -rc
-   - pycodestyle farmlib/ pygameui/ tests/ *.py*
+   - pycodestyle farmlib/ pygameui/ test/ *.py*
    - coverage run -m unittest
 
 after_success:

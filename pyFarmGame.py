@@ -119,6 +119,7 @@ class FarmGamePygame(object):
         # remove lock
         self.remove_game_lock()
 
+
 if __name__ == '__main__':
     f = FarmGamePygame()
     f.set_active_screen(MenuWindow())
