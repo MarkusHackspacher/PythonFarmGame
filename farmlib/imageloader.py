@@ -23,6 +23,7 @@ class ImageLoader(object):
         """Load image by name"""
         # wrong name
         if name not in self.config:
+            print('Wrong Name {} not in {}'.format(name, self.config))
             return self.empty.copy()
         # check loaded images
         if name in self.loaded:

@@ -19,8 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Python farm game.  If not, see <http://www.gnu.org/licenses/>.
 
-import base64
-import os, sys
+import base64, os
 from unittest import TestCase
 
 import pygame
@@ -29,9 +28,7 @@ import farmlib
 from farmlib.gamemanager import GameManager
 from farmlib.imageloader import ImageLoader
 from farmlib.inventorywindow import InventoryWindow
-
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from farmlib.farm import objects
 
 pygame.init()
 
@@ -40,6 +37,14 @@ h = 480
 screen_size = w, h
 
 screen = pygame.display.set_mode(screen_size)
+# Images data
+imagesdata = farmlib.images["imagesdata"]
+
+# merge objects images data (objects image have objects/objects+id.png)
+for gobject in objects:
+    name = "object" + str(gobject['id']) + ".png"
+    objectsimagepath = os.path.join("images", os.path.join("objects", name))
+    imagesdata["object" + str(gobject['id'])] = objectsimagepath
 
 
 class TestInventoryWindow(TestCase):
@@ -49,9 +54,9 @@ class TestInventoryWindow(TestCase):
 
     def setUp(self):
         '''Creates the instance'''
-        imagesdata = farmlib.images["imagesdata"]
         self.images = ImageLoader(imagesdata)
         self.gamemanager = GameManager()
+        self.gamemanager.start_new_game()
         self.player = self.gamemanager.getplayer()
         self.inventor = InventoryWindow(self.images, self.player)
 
