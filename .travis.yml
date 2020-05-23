@@ -22,11 +22,9 @@ install:
     - pip install pycodestyle
 
 script: 
-   - ls
-   - cd PythonFarmGame
    - isort -c -rc
    - pycodestyle farmlib/ pygameui/ test/ *.py*
-   - coverage run -m unittest
+   - coverage run --source pysorter setup.py test
 
 after_success:
 - coverage report -m
