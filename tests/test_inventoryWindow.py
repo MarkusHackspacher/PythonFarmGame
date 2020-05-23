@@ -19,16 +19,17 @@
 # You should have received a copy of the GNU General Public License
 # along with Python farm game.  If not, see <http://www.gnu.org/licenses/>.
 
-import base64, os
+import base64
+import os
 from unittest import TestCase
 
 import pygame
 
 import farmlib
+from farmlib.farm import objects
 from farmlib.gamemanager import GameManager
 from farmlib.imageloader import ImageLoader
 from farmlib.inventorywindow import InventoryWindow
-from farmlib.farm import objects
 
 pygame.init()
 
@@ -75,7 +76,9 @@ class TestInventoryWindow(TestCase):
                 checksum +
                 bytes(str(self.player.itemscounter).encode()))
         self.inventor.lchecksum = checksum
-        print(checksum)
         self.assertEqual(self.inventor.ismodified(), False)
         self.assertEqual(self.inventor.lchecksum, checksum)
-        print(checksum)
+ 
+    def test_get_index_inventory_under_mouse(self):
+
+       print(self.inventor.get_index_inventory_under_mouse())
