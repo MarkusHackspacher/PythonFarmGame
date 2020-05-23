@@ -10,14 +10,6 @@ before_install:
   -   sudo apt-get install python-dev libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev
   -   sudo apt-get install libsdl-ttf2.0-dev libportmidi-dev libjpeg-dev
 
-# python-numpy xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic
-#  fluid-soundfont-gm 
-# libtiff5-dev musescore-soundfont-gm \
-# libx11-6 
-#          \
-#          libx11-dev  \ 
-#   libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
-
 env:
   global:
     - SDL_VIDEODRIVER=dummy
@@ -30,6 +22,8 @@ install:
     - pip install pycodestyle
 
 script: 
+   - ls
+   - cd PythonFarmGame
    - isort -c -rc
    - pycodestyle farmlib/ pygameui/ test/ *.py*
    - coverage run -m unittest
