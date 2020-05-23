@@ -20,6 +20,7 @@
 # along with Python farm game.  If not, see <http://www.gnu.org/licenses/>.
 
 import base64
+import os, sys
 from unittest import TestCase
 
 import pygame
@@ -28,6 +29,9 @@ import farmlib
 from farmlib.gamemanager import GameManager
 from farmlib.imageloader import ImageLoader
 from farmlib.inventorywindow import InventoryWindow
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 pygame.init()
 
