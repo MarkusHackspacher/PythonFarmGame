@@ -80,8 +80,11 @@ class TestInventoryWindow(TestCase):
         self.assertEqual(self.inventor.lchecksum, checksum)
 
     def test_get_index_inventory_under_mouse(self):
-
         print(self.inventor.get_index_inventory_under_mouse())
 
     def test_create_gui(self):
         self.inventor.create_gui()
+
+    def test_repaint(self):
+        self.inventor.repaint()
+
