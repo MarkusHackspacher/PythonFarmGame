@@ -18,12 +18,13 @@ env:
 install: 
     - pip install -r requirements.txt
     - pip install coverage codacy-coverage
-    - pip install isort
-    - pip install pycodestyle
+    - pip install isort pycodestyle
 
-script: 
+before_script:
    - isort -c -rc
    - pycodestyle farmlib/ pygameui/ tests/ *.py*
+
+script: 
    - coverage run --source farmlib setup.py test
 
 after_success:

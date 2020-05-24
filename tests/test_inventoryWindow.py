@@ -87,4 +87,3 @@ class TestInventoryWindow(TestCase):
 
     def test_repaint(self):
         self.inventor.repaint()
-
