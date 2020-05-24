@@ -1,3 +1,7 @@
+
+[![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)](https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3b2ce1b86de5479e8ef520273e01c4cf)](https://www.codacy.com/manual/Malta/PythonFarmGame?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MarkusHackspacher/PythonFarmGame&amp;utm_campaign=Badge_Grade)
+
 Python farm game
 ================
 

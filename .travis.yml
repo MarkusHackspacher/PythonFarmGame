@@ -17,7 +17,7 @@ env:
 
 install: 
     - pip install -r requirements.txt
-    - pip install coveralls
+    - pip install coverage codacy-coverage
     - pip install isort
     - pip install pycodestyle
 
@@ -27,6 +27,8 @@ script:
    - coverage run --source farmlib setup.py test
 
 after_success:
-- coverage report -m
-- coveralls
+  - coverage report -m
+  - coverage xml
+  - export CODACY_PROJECT_TOKEN=f64f393890734af9a8b1abfae6aa5dbe
+  - python-codacy-coverage -r coverage.xml
 
