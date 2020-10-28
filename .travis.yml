@@ -1,35 +1,26 @@
 language: python
-
-sudo: false
-
+os: linux
+dist: bionic
 python:
  - "3.8"
-
 before_install:
   -   sudo apt-get update
   -   sudo apt-get install python-dev libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev
   -   sudo apt-get install libsdl-ttf2.0-dev libportmidi-dev libjpeg-dev
-
 env:
   global:
     - SDL_VIDEODRIVER=dummy
     - SDL_AUDIODRIVER=disk
-
 install: 
     - pip install -r requirements.txt
     - pip install coverage codacy-coverage
     - pip install isort pycodestyle
-
-before_script:
-   - isort -c -rc
-   - pycodestyle farmlib/ pygameui/ tests/ *.py*
-
 script: 
+   - isort . --diff
+   - pycodestyle farmlib/ pygameui/ tests/ *.py*
    - coverage run --source farmlib setup.py test
-
 after_success:
   - coverage report -m
   - coverage xml
   - export CODACY_PROJECT_TOKEN=f64f393890734af9a8b1abfae6aa5dbe
   - python-codacy-coverage -r coverage.xml
-
