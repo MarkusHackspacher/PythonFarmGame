@@ -37,5 +37,5 @@ jobs:
     - name: Test with pytest
       run: |
         export SDL_VIDEODRIVER=dummy
-        export SDL_AUDIODRIVER=none
+        export SDL_AUDIODRIVER=disk
         pytest
