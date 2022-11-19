@@ -4,7 +4,7 @@ TIPS:
 * You can DESTROY plant using shovel.
 * You can `pickup` pond using shovel.
 
-KEYS:
+KEYS:",
 S - Open/Close market
 I - Open/Close inventory
 Z/X - Go to previous/next farm
