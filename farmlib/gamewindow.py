@@ -3,8 +3,6 @@ Created on 27-05-2012
 
 @author: orneo1212
 '''
-from __future__ import division
-
 import logging
 import os
 import random
@@ -414,9 +412,9 @@ class GameWindow(Window):
         :return:
         """
         x = x / 2
-        xx = int(round(((y + x) / 32) - 0.5))
-        yy = int(round(((y - x) / 32) - 0.5))
-        return xx, yy
+        xx = (y + x) / 32
+        yy = (y - x) / 32
+        return int(xx), int(yy)
 
     def go_to_main_menu(self):
         """go to main menu
