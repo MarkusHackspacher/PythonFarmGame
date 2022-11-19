@@ -6,7 +6,7 @@ import pygame
 
 from pygameui.widget import Widget
 
-buttonbgpath = os.path.join("images", "gui", "buttonbg.png")
+buttonbgpath = os.path.join("data", "images", "gui", "buttonbg.png")
 
 
 class Button(Widget):
