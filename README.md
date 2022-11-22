@@ -64,3 +64,16 @@ Licence
 -------
 
 GPL v3 ( [gplv3.fsf.org](http://gplv3.fsf.org) or LICENSE included with game)
+
+## Build
+```
+pip install pex
+./build.sh
+```
+
+## Running
+Run game by executing ```python -m farmlib.main``` in console
+or ```./PythonFarmGame.pex``` if you have a pex file
+
+## Donate
+**Paypal**: orneo1212@gmail.com
