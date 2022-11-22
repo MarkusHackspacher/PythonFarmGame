@@ -1,7 +1,5 @@
-from __future__ import absolute_import
-
-from farmlib import rules
-from farmlib.pluginsystem import BasePlugin, Listener
+from . import rules
+from .pluginsystem import BasePlugin, Listener
 
 REMOVEWILTEDCOST = rules["REMOVEWILTEDCOST"]
 REMOVEANTHILLCOST = rules["REMOVEANTHILLCOST"]

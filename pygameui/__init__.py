@@ -1,8 +1,7 @@
-from __future__ import absolute_import
+from .container import Container
+from .window import Window
+from .widget import Widget
+from .image import Image
+from .label import Label
+from .button import Button
 
-from pygameui.button import Button
-from pygameui.container import Container
-from pygameui.image import Image
-from pygameui.label import Label
-from pygameui.widget import Widget
-from pygameui.window import Window

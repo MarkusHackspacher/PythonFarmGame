@@ -1,6 +1,4 @@
-from __future__ import absolute_import
-
-from pygameui.widget import Widget
+from .widget import Widget
 
 
 class Image(Widget):

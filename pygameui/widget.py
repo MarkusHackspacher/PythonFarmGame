@@ -22,7 +22,7 @@ class Widget(object):
         self.position = position
         self.width = width
         self.height = height
-        self.size = [self.width, self.height]
+        self.size = (width, height)
 
         self.visible = True
         self.active = False
@@ -88,7 +88,7 @@ class Widget(object):
         :param event:
         :return:
         """
-        # Mouse motion
+       # Mouse motion
         if event.type == pygame.MOUSEMOTION:
             pos = (0, 0)
             # get relative mouse pos if there is parent container

@@ -1,4 +1,3 @@
-from __future__ import absolute_import
 
 import base64
 import os
@@ -6,13 +5,8 @@ import random
 import time
 
 import farmlib
-from farmlib.dictmapper import DictMapper
-from farmlib.pnoise import pnoise
-
-try:
-    xrange
-except NameError:
-    xrange = range
+from .dictmapper import DictMapper
+from .pnoise import pnoise
 
 
 class FarmTile(object):
@@ -111,10 +105,7 @@ class FarmField(object):
 
         ft = [str(x.water) + str(x.farmobject)
               for x in listvalues(self.farmtiles)]
-        try:
-            checksum = base64.b64encode("".join(ft))
-        except TypeError:
-            checksum = base64.b64encode(bytes(str("".join(ft)).encode()))
+        checksum = base64.b64encode("".join(ft).encode("utf-8"))
         return checksum
 
     def ismodified(self):
@@ -209,7 +200,7 @@ class FarmField(object):
                 farmtile['object'].to_harvest:
             # harvest seeds
             player.event_harvest(farmtile['object'])
-            for _ in xrange(farmtile['object'].growquantity):
+            for _ in range(farmtile['object'].growquantity):
                 #
                 itemid = farmtile['object'].id
                 if itemid not in player.inventory:
@@ -291,7 +282,7 @@ class FarmField(object):
 
         :return:
         """
-        for _ in xrange(random.randint(10, 15)):
+        for _ in range(random.randint(10, 15)):
             xx = random.randint(0, 11)
             yy = random.randint(0, 11)
             fobject = FarmObject()
@@ -305,7 +296,7 @@ class FarmField(object):
 
         :return:
         """
-        for _ in xrange(random.randint(10, 15)):
+        for _ in range(random.randint(10, 15)):
             xx = random.randint(0, 11)
             yy = random.randint(0, 11)
             fobject = FarmObject()

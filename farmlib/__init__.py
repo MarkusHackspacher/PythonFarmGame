@@ -1,11 +1,10 @@
-from __future__ import absolute_import
 
 import os
 
 import pygame
 
-from farmlib.dictmapper import DictMapper
-from farmlib.pluginsystem import base_plugin_system as PluginSystem
+from .dictmapper import DictMapper
+from .pluginsystem import base_plugin_system as PluginSystem
 
 # SETTINGS
 

@@ -191,7 +191,7 @@ class PluginSystem(object):
         """
         # Set priority for events
         tempqueue = []
-        for nr in xrange(len(self.eventqueue)):
+        for nr in range(len(self.eventqueue)):
             ev = self.eventqueue.pop(0)
             for listener in self._listeners:
                 done = listener.apply_priority(ev)
@@ -203,7 +203,7 @@ class PluginSystem(object):
         # Sort events
         self.eventqueue.sort(key=lambda x: x.priority)
         # Handle events
-        for nr in xrange(len(self.eventqueue)):
+        for nr in range(len(self.eventqueue)):
             ev = self.eventqueue.pop(0)
             for listener in self._listeners:
                 listener.apply_priority(ev)

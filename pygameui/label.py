@@ -1,8 +1,7 @@
-from __future__ import absolute_import
 
 import pygame
 
-from pygameui.widget import Widget
+from .widget import Widget
 
 
 class Label(Widget):
@@ -31,7 +30,7 @@ class Label(Widget):
 
         :return:
         """
-        self.image = self.labelfont.render(self.text, 0, self.color)
+        self.image = self.labelfont.render(str(self.text), 0, self.color)
         self.image = self.image.convert_alpha()
         self.width = self.image.get_size()[0]
         self.height = self.image.get_size()[1]
@@ -65,13 +64,8 @@ class Label(Widget):
         remove , repaint=True
 
         :param newtext:
-        :param repaint:
         :return:
         """
-        try:
-            newtext = unicode(newtext)
-        except NameError:
-            newtext = str(newtext)
         self.text = newtext
         self.setposition(self.orginal_position)
         self.mark_modified()
