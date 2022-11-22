@@ -1,10 +1,8 @@
-from __future__ import absolute_import
-
 import os
 
 import pygame
 
-from pygameui.widget import Widget
+from .widget import Widget
 
 buttonbgpath = os.path.join("data", "images", "gui", "buttonbg.png")
 
@@ -119,3 +117,4 @@ class Button(Widget):
             # make button active
             if self.parent:
                 self.parent.makeactive(self)
+

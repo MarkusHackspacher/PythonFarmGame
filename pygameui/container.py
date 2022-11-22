@@ -3,11 +3,10 @@ Created on 22-05-2012
 
 @author: orneo1212
 '''
-from __future__ import absolute_import
 
 import pygame
 
-from pygameui.widget import Widget
+from .widget import Widget
 
 
 class Container(Widget):

@@ -3,11 +3,9 @@ Created on 22-05-2012
 
 @author: orneo1212
 '''
-from __future__ import absolute_import
-
 import pygame
 
-from pygameui.container import Container
+from .container import Container
 
 
 class Window(Container):

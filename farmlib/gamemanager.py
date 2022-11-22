@@ -151,7 +151,7 @@ class GameManager(object):
             farm.seconds_to_update = 1000
         if farm.seconds_to_update:
             # 1 second is equal 20 updates
-            for _ in xrange(farm.seconds_to_update):
+            for _ in range(farm.seconds_to_update):
                 self.update()
 
     def save_gamestate(self, player):
@@ -197,7 +197,7 @@ class GameManager(object):
                 return d.keys()
 
         # fill tiles
-        for farmid in xrange(self.getfarmcount()):
+        for farmid in range(self.getfarmcount()):
             farm = self.getfarm(farmid)
             data["fields"].append({"tiles": []})
             for ftt in listkeys(farm.farmtiles):
@@ -260,7 +260,7 @@ class GameManager(object):
             data['fields'].append({})
             data['fields'][0]["tiles"] = data["tiles"]
         # load tiles
-        for farmid in xrange(len(data["fields"])):
+        for farmid in range(len(data["fields"])):
             farm = self.getfarm(farmid)
             if farm is None:
                 farm = self.addfarm()

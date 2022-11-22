@@ -7,3 +7,5 @@ Screenshots/*.png
 
 .vscode
 dev/
+build/
+PythonFarmGame.pex

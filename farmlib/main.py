@@ -5,11 +5,12 @@ import os
 
 import pygame
 
-from farmlib import __VERSION__, PluginSystem
-from farmlib.menuwindow import MenuWindow
+from . import __VERSION__, PluginSystem
+from .menuwindow import MenuWindow
 
 pygame.init()
-pygame.key.set_repeat(100, 100)
+pygame.key.set_repeat(400, 100)
+
 
 
 class FarmGamePygame(object):

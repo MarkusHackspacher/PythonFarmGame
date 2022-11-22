@@ -3,19 +3,12 @@ Created on 24-05-2012
 
 @author: orneo1212
 '''
-from __future__ import absolute_import
-
 import pygame
 
 import farmlib
-from farmlib.farm import objects
-from farmlib.tooltip import Tooltip
+from .farm import objects
+from .tooltip import Tooltip
 from pygameui import Button, Container, Image, Label
-
-try:
-    xrange
-except NameError:
-    xrange = range
 
 WATERREFILLCOST = farmlib.rules["WATERREFILLCOST"]
 OBJECTSNOTINMARKET = farmlib.rules["OBJECTSNOTINMARKET"]
@@ -264,7 +257,7 @@ class MarketWindow(Container):
 
         if done:
             # Remove items
-            for x in xrange(self.count):
+            for x in range(self.count):
                 self.player.remove_item(itemid)
             # Add money
             self.player.money += self.get_item_sell_value(itemid)
@@ -297,7 +290,7 @@ class MarketWindow(Container):
         :param count:
         :return:
         """
-        for x in xrange(count):
+        for x in range(count):
             self.player.add_item(self.selecteditem)
 
     # TOOLTIP
