@@ -12,7 +12,6 @@ pygame.init()
 pygame.key.set_repeat(400, 100)
 
 
-
 class FarmGamePygame(object):
     """
     Farm Game Pygame
@@ -125,4 +124,3 @@ if __name__ == '__main__':
     f = FarmGamePygame()
     f.set_active_screen(MenuWindow())
     f.run()
-

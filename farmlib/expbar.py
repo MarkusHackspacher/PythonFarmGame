@@ -5,7 +5,7 @@ Created on 31-05-2012
 '''
 import pygame
 
-from pygameui import Label
+from pygameui.label import Label
 
 
 class ExpBar(Label):

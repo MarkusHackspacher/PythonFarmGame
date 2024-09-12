@@ -3,7 +3,8 @@ Created on 31-05-2012
 
 @author: orneo1212
 '''
-from pygameui import Label, Window
+from pygameui.label import Label
+from pygameui.window import Window
 
 
 class Tooltip(Window):

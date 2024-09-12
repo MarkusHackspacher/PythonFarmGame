@@ -5,7 +5,8 @@ Created on 24-05-2012
 '''
 import os
 
-from pygameui import Label, Window
+from pygameui.label import Label
+from pygameui.window import Window
 
 
 class HelpWindow(Window):

@@ -117,4 +117,3 @@ class Button(Widget):
             # make button active
             if self.parent:
                 self.parent.makeactive(self)
-

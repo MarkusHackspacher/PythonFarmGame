@@ -4,7 +4,6 @@ import os
 import pygame
 
 from .dictmapper import DictMapper
-from .pluginsystem import base_plugin_system as PluginSystem
 
 # SETTINGS
 

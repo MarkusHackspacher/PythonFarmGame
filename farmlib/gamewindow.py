@@ -11,7 +11,7 @@ from datetime import datetime
 import pygame
 
 import farmlib
-from farmlib import __VERSION__, PluginSystem
+from farmlib import __VERSION__
 from farmlib.coreplugin import CorePlugin
 from farmlib.expbar import ExpBar
 from farmlib.farm import objects
@@ -24,7 +24,11 @@ from farmlib.renderfunctions import (draw_selected_seed, draw_tools,
                                      render_field, render_rain,
                                      render_seed_notify)
 from farmlib.timer import Timer
-from pygameui import Button, Image, Label, Window
+from farmlib.pluginsystem import base_plugin_system as PluginSystem
+from pygameui.button import Button
+from pygameui.image import Image
+from pygameui.label import Label
+from pygameui.window import Window
 
 log = logging.getLogger("farmlib/gamewindow")
 
@@ -40,7 +44,8 @@ imagesdata = farmlib.images["imagesdata"]
 # merge objects images data (objects image have objects/objects+id.png)
 for gobject in objects:
     name = "object" + str(gobject['id']) + ".png"
-    objectsimagepath = os.path.join("data", "images", os.path.join("objects", name))
+    objectsimagepath = os.path.join("data", "images",
+                                    os.path.join("objects", name))
     imagesdata["object" + str(gobject['id'])] = objectsimagepath
 
 

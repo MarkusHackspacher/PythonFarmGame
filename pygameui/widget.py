@@ -88,7 +88,7 @@ class Widget(object):
         :param event:
         :return:
         """
-       # Mouse motion
+        # Mouse motion
         if event.type == pygame.MOUSEMOTION:
             pos = (0, 0)
             # get relative mouse pos if there is parent container

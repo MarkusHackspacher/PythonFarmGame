@@ -5,8 +5,9 @@ import os
 
 import pygame
 
-from farmlib import __VERSION__, PluginSystem
+from farmlib import __VERSION__
 from farmlib.menuwindow import MenuWindow
+from farmlib.pluginsystem import base_plugin_system as PluginSystem
 
 pygame.init()
 pygame.key.set_repeat(100, 100)
@@ -124,4 +125,3 @@ if __name__ == '__main__':
     f = FarmGamePygame()
     f.set_active_screen(MenuWindow())
     f.run()
-
