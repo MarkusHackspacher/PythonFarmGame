@@ -5,7 +5,7 @@ Python farm game
 Farming game where you can plant strawberries, onions, beans, carrots, potatos, tomatos and radishes.
 Use axe and pickaxe to remove plank and stone and shovel to remove anthill.
 
-Writen in python using pygame game library and supports Python 2.7 and 3.x.
+Writen in python using pygame game library and supports Python 3.x.
 
 Creator: orneo1212 <orneo1212@gmail.com>
 GitHub (source): [github.com/orneo1212/PythonFarmGame](https://github.com/orneo1212/PythonFarmGame)
@@ -29,14 +29,6 @@ install pygame, change the directory and run::
 pip install pygame
 cd PythonFarmGame
 ./pyFarmGame.py
-```
-
-start with Python3
-
-```
-pip3 install pygame
-cd PythonFarmGame
-python3 ./pyFarmGame.py
 ```
 
 Keys
@@ -74,6 +66,3 @@ pip install pex
 ## Running
 Run game by executing ```python -m farmlib.main``` in console
 or ```./PythonFarmGame.pex``` if you have a pex file
-
-## Donate
-**Paypal**: orneo1212@gmail.com
