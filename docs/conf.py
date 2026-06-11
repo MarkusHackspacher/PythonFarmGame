@@ -55,7 +55,7 @@ master_doc = 'index'
 # General information about the project.
 PROJECT = 'PythonFarmGame'
 COPYRIGHT = '2016, 2026 Markus Hackspacher'
-AUTHOR = 'Markus Hackspacher'
+UPCASE = 'Markus Hackspacher'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -270,11 +270,11 @@ man_pages = [
 # -- Options for Texinfo output -------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
+# (source start file, target name, title, AUTHOR,
 #  dir menu entry, description, category)
 texinfo_documents = [
   (master_doc, 'PythonFarmGame', 'PythonFarmGame Documentation',
-   author, 'PythonFarmGame', 'One line description of project.',
+   AUTHOR, 'PythonFarmGame', 'One line description of project.',
    'Miscellaneous'),
 ]
 
