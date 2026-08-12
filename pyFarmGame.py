@@ -15,7 +15,8 @@ pygame.key.set_repeat(100, 100)
 
 class FarmGamePygame(object):
     """
-    Farm Game Pygame
+    Farm Game 
+    in python and use Pygame
     """
     def __init__(self):
         """Init game"""
